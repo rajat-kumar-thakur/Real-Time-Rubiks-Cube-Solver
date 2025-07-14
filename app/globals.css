@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes cube-rotate {
+  from {
+    transform: rotateX(-15deg) rotateY(30deg);
+  }
+  to {
+    transform: rotateX(-15deg) rotateY(390deg);
+  }
+}
+
+.cube-rotate {
+  animation: cube-rotate 2s ease-in-out;
+}
+
+/* Scanning effect */
+@keyframes scanner-line {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.scanner-line {
+  animation: scanner-line 2s ease-in-out infinite;
+}
+
+/* Pulse effect for active elements */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* 3D perspective for virtual cube */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Enhanced cube rotation animation */
+@keyframes cube-rotate-full {
+  0% {
+    transform: rotateX(-15deg) rotateY(30deg);
+  }
+  25% {
+    transform: rotateX(15deg) rotateY(120deg);
+  }
+  50% {
+    transform: rotateX(-15deg) rotateY(210deg);
+  }
+  75% {
+    transform: rotateX(15deg) rotateY(300deg);
+  }
+  100% {
+    transform: rotateX(-15deg) rotateY(390deg);
+  }
+}
+
+.cube-rotate {
+  animation: cube-rotate-full 3s ease-in-out;
+}
+
+/* Face rotation animations */
+@keyframes face-rotate-cw {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(90deg);
+  }
+}
+
+@keyframes face-rotate-ccw {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-90deg);
+  }
+}
+
+@keyframes face-rotate-180 {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(180deg);
+  }
+}
+
+.face-rotate-cw {
+  animation: face-rotate-cw 0.6s ease-in-out;
+}
+
+.face-rotate-ccw {
+  animation: face-rotate-ccw 0.6s ease-in-out;
+}
+
+.face-rotate-180 {
+  animation: face-rotate-180 0.8s ease-in-out;
+}
+
+/* Solution execution glow effect */
+@keyframes solution-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(34, 197, 94, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.8);
+  }
+}
+
+.solution-glow {
+  animation: solution-glow 1s ease-in-out infinite;
+}
