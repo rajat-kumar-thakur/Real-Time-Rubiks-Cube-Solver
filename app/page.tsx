@@ -1,5 +1,5 @@
 "use client";
-
+import { Analytics } from "@vercel/analytics/next"
 import { useState } from 'react';
 import CameraScanner from '@/components/CameraScanner';
 import CubeVisualization from '@/components/CubeVisualization';
