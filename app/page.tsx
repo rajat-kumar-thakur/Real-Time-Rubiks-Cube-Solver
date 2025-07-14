@@ -88,7 +88,7 @@ export default function Home() {
                 <Cube className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-white">CubeSolver AI</h1>
+                <h1 className="text-2xl font-bold text-white">SolveARubik</h1>
                 <p className="text-slate-400">Real-time Rubik's Cube Solver</p>
               </div>
             </div>

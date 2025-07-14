@@ -5,8 +5,11 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'CubeSolver AI - Real-time Rubik\'s Cube Solver',
+  title: 'SolveARubik',
   description: 'Advanced AI-powered Rubik\'s cube solver with real-time camera scanning and step-by-step solutions',
+  icons: {
+    icon: "/rubik.png", // This adds favicon
+  },
 };
 
 export default function RootLayout({
